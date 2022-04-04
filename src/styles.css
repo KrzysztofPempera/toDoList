@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #f8f8f8;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid transparent;
+}

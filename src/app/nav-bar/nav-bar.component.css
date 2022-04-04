@@ -1,0 +1,27 @@
+
+.navbar{
+    margin: 0 0;
+    color: #666666;
+}
+
+.navbar:first-child {
+    margin-left: 0;
+    margin-right: auto;
+    justify-self: start;
+}
+
+.navbar:last-child {
+    margin-right: 0;
+}
+
+.navbar:hover {
+    border-bottom: 2px solid currentColor;
+    color: #333333;
+}
+
+.navbar--active,
+.navbar:active {
+    font-weight: 700;
+    color: #333333;
+}
+

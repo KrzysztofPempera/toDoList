@@ -1,1 +1,3 @@
-<p>nav-bar works!</p>
+<button class="navbar" *ngFor="let nav of navbar" [routerLink] = "[nav.routerLink]" [routerLinkActive] = "['navbar--active']" ><a>{{ nav.name }}</a></button>
+
+

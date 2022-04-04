@@ -1,0 +1,40 @@
+::ng-deep .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 72px;
+    border-bottom: 1px solid #cccccc;
+}
+
+::ng-deep .header__content {
+    max-width: 800px;
+    margin: 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+::ng-deep .container {
+    background-color: #ffffff;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 142px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 813px) {
+    ::ng-deep .header__content {
+        margin: auto;
+    }
+}
