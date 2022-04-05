@@ -1,3 +1,15 @@
-<button class="navbar" *ngFor="let nav of navbar" [routerLink] = "[nav.routerLink]" [routerLinkActive] = "['navbar--active']" ><a>{{ nav.name }}</a></button>
+<h1 class="navbar">toDoList</h1>
+<button class="navbar button" *ngFor="let nav of navbar" [routerLink] = "[nav.routerLink]" [routerLinkActive] = "['button--active']" ><a>{{ nav.name }}</a></button>
 
+<div class="navbar__dropdown">
+    <h1>toDoList</h1>
 
+    <ul [className] = "this.navbarService.collapsed ? 'navbar__dropdown--show' : 'navbar__dropdown--hidden'">
+        <li class="" *ngFor="let nav of navbar" [routerLink] = "[nav.routerLink]"><a>{{ nav.name }}</a></li>
+    </ul>
+    <div class="navbar__toggle" [ngClass]="{'is-active': this.toggler}" id="toggler" (click)="toggle(); showMenu()" >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</div>

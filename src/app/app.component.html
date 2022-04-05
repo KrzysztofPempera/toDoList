@@ -1,5 +1,6 @@
-<header><nav class="header"><app-nav-bar class="header__content"></app-nav-bar></nav></header>
+<header [ngClass]="{'header--extend': this.navbarService.collapsed}"><nav class="header"><app-nav-bar class="header__content"></app-nav-bar></nav></header>
 
-<main class="container">
+<main class="container" [ngClass]="{'container--extend': this.navbarService.collapsed}">
   <router-outlet></router-outlet>
+  
 </main>

@@ -33,8 +33,20 @@
     margin-right: auto;
 }
 
+
 @media screen and (min-width: 813px) {
     ::ng-deep .header__content {
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    ::ng-deep .container--extend {
+        margin-top: 20px;
+    }
+    ::ng-deep .header--extend {
+        height: 300px;
+        margin: 0 0;
+        transition: all 0.3s cubic-bezier(.34,.68,.86,.67);
     }
 }

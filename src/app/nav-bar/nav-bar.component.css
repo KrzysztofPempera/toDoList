@@ -1,11 +1,11 @@
 
 .navbar{
-    margin: 0 0;
+    margin: 1em 1em;
     color: #666666;
 }
 
 .navbar:first-child {
-    margin-left: 0;
+    margin-left: 1em;
     margin-right: auto;
     justify-self: start;
 }
@@ -14,14 +14,104 @@
     margin-right: 0;
 }
 
-.navbar:hover {
+.navbar.button:hover {
     border-bottom: 2px solid currentColor;
     color: #333333;
 }
 
-.navbar--active,
-.navbar:active {
+.navbar.button--active,
+.navbar.button:active {
     font-weight: 700;
     color: #333333;
+
 }
 
+.navbar__dropdown{
+    margin: 1em ;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        display: none;
+    }
+    .navbar__dropdown {
+        display: flex;
+        width: 100%;
+        margin: 0 0;
+    }
+
+    .navbar__dropdown--hidden {
+        display: none;
+    }
+
+    .navbar__dropdown>h1{
+        margin-left: 1em;
+    }
+    
+    .navbar__dropdown--show{
+        position: absolute;
+        top: 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+        width: 100%;
+        background-color: #f1efef;
+        margin-top: 0;
+    }
+
+    .navbar__dropdown--show>li {
+        margin: 1em;
+        border-bottom: 2px solid #f1efef;
+        cursor: pointer;
+        padding: 0.2em;
+    }
+
+    .navbar__dropdown--show>li:hover {
+        border-bottom: 2px solid currentColor;
+        color: #333333;
+    }
+    .navbar__dropdown--show>li:active {
+        font-weight: 700;
+        color: #333333;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px ;
+        margin: 3px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: #666666;
+    }
+
+    #toggler {
+        cursor: pointer;
+    }
+
+    #toggler.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #toggler.is-active .bar:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+    }
+    #toggler.is-active .bar:nth-child(3){
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+
+    .navbar__dropdown:last-child{
+        margin-right: 1em;
+    }
+
+}
